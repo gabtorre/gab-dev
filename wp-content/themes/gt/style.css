@@ -8,6 +8,7 @@ Version: 1.0
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    background: hsl(220deg 13% 10%);
 }
 
 h1 {
@@ -57,7 +58,7 @@ input:focus, textarea:focus {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(0,0,0,0.2) url('img/3.jpg');
+    background: rgba(0,0,0,0.2) url('img/bg.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -113,7 +114,7 @@ input:focus, textarea:focus {
 
 nav {
     height: 72px;
-    background: #202125;
+    background: hsl(220deg 13% 5%);
     width: 100%;
     margin: 0;
     position: fixed;
@@ -316,7 +317,7 @@ section {
 /* Footer */
 
 footer {
-    background: black;
+    background: hsl(220deg 13% 5%);
     padding: 8px;
     color: #eee;
     display: flex;
@@ -435,7 +436,6 @@ footer #social-media-footer ul li:hover a .fa-github {
     display: flex;
     flex-direction: column;
     width: 70%;
-    border-left: 1px solid #999;
 }
 
 #blogpost .card {
