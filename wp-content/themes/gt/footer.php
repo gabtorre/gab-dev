@@ -1,4 +1,5 @@
-<footer>
+    </main>
+        <footer>
             <div id="left-footer">
                 <h3>Quick Links</h3>
                 <p>
@@ -46,10 +47,9 @@
                         </li>
                     </ul>
                 </div>
-                <p>This website is developed by GTCoding</p>
+                <p>Website developed by <a rel=”noreferrer” href="#">Gabriel Torres</a></p>
             </div>
         </footer>
-    </main>
     <?php wp_footer() ?>
 </body>
 </html>
