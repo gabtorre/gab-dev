@@ -14,13 +14,7 @@
                 <a href="<?php echo site_url('');?>">Home</a>
             </li>
             <li>
-                <a href="<?php echo site_url('/blog');?>">Blog</a>
-            </li>
-            <li>
-                <a href="<?php echo site_url('/projects');?>">Projects</a>
-            </li>
-            <li>
-                <a href="<?php echo site_url('/about');?>">About</a>
+                <a href="<?php echo site_url('/blog');?>">All Posts</a>
             </li>
             <div class="searchbox-slide-menu">
                 <?php get_search_form(); ?>
@@ -46,18 +40,13 @@
             <li>
                 <a href="<?php echo site_url('/blog');?>"
                     <?php if(get_post_type() == 'post') echo 'class="active"' ?>
-                >Blog</a>
+                >All Posts</a>
             </li>
-            <li>
-                <a href="<?php echo site_url('/projects');?>"
-                <?php if(get_post_type() == 'project') echo 'class="active"' ?>
-                >Projects</a>
-            </li>
-            <li>
+            <!-- <li>
                 <a href="<?php echo site_url('/about');?>"
                     <?php if(is_page( 'About' )) echo 'class="active"' ?>
                 >About</a>
-            </li>
+            </li> -->
             <li>
                 <div id="search-icon">
                     <i class="fas fa-search"></i>

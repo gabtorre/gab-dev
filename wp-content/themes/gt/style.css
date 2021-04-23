@@ -28,6 +28,7 @@ h2 {
 
 h3 {
     margin: 0;
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 400;
@@ -49,6 +50,18 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.easy {
+    color: #9beba5;
+}
+
+.medium {
+    color: #f0aa5b;
+}
+
+.hard {
+    color: #eb9bb5;
 }
 
 /* Inputs */
@@ -212,7 +225,7 @@ nav ul {
 
 #slideout-menu {
     display: none;
-    background: #2d3436;
+    background: #16181d;
     z-index: 100;
     position: fixed;
     transition: 0.4s;
@@ -298,7 +311,6 @@ section {
 
 .card .card-description {
     padding: 0;
-    display: flex;
     align-items: baseline;
 }
 
@@ -337,33 +349,20 @@ footer {
     color: #eee;
     display: flex;
     margin-top: 20px;
-    bottom: 0;
 }
 
 footer a {
     color: white;
 }
 
-footer #left-footer {
-    flex: 1;
-    border-right: 1px solid #fff;
-    padding-left: 32px;
-}
-
-footer #left-footer ul {
-    padding: 0;
-    list-style: none;
-    line-height: 1.5;
-}
-
-footer #right-footer {
+footer #social-media-footer {
     flex: 2;
     padding: 8px;
     text-align: center;
 }
 
-footer #social-media-footer a .fa-facebook, 
-footer #social-media-footer a .fa-youtube, 
+footer #social-media-footer a .fa-linkedin, 
+footer #social-media-footer a .fa-globe, 
 footer #social-media-footer a .fa-github {
     color: white;
     transition: 0.4s;
@@ -377,13 +376,13 @@ footer #social-media-footer ul {
 }
 
 footer #social-media-footer ul li {
-    font-size: 48px;
+    font-size: 36px;
     padding: 16px;
     transition: 0.4s;
 }
 
-footer #social-media-footer ul li:hover a .fa-youtube,
-footer #social-media-footer ul li:hover a .fa-facebook,
+footer #social-media-footer ul li:hover a .fa-globe,
+footer #social-media-footer ul li:hover a .fa-linkedin,
 footer #social-media-footer ul li:hover a .fa-github {
     background: linear-gradient(90deg, rgba(155,235,165,1) 0%, rgba(0,212,255,1) 100%);
     -webkit-background-clip: text;
@@ -404,8 +403,6 @@ footer #social-media-footer ul li:hover a .fa-github {
 }
 
 .page-heading:hover {
-    
-    /* background: #9beba5; */
     background: linear-gradient(90deg, rgba(155,235,165,1) 0%, rgba(0,212,255,1) 100%);
     color: black;
     padding-left: 10px;
@@ -452,7 +449,6 @@ footer #social-media-footer ul li:hover a .fa-github {
 
 #blogpost {
     display: flex;
-    flex-direction: column;
     width: 70%;
 }
 
@@ -468,9 +464,8 @@ footer #social-media-footer ul li:hover a .fa-github {
 
 #sidebar {
     flex: 1;
-    padding: 8px 16px;
+    padding-left: 20px;
     color: white;
-    margin-top: 27px;
 }
 
 #sidebar a {
@@ -478,10 +473,10 @@ footer #social-media-footer ul li:hover a .fa-github {
 }
 
 #sidebar li {
-    margin: 8px 0;
     list-style: none;
     background: #272b33;
     padding: 15px;
+    margin-bottom: 20px;
 }
 
 #sidebar li li {
@@ -519,11 +514,6 @@ footer #social-media-footer ul li:hover a .fa-github {
 
 /* Comments section */
 
-#comments-section {
-    /* border-top: 2px solid #eee;
-    padding: 8px; */
-}
-
 .comment-form {
     display: flex;
     flex-direction: column;
@@ -558,10 +548,6 @@ footer #social-media-footer ul li:hover a .fa-github {
 .form-submit .submit:hover, .wpcf7 .wpcf7-submit:hover {
     background: #d171dd;
     color: white;
-}
-
-.comment-reply-title {
-    /* text-align: center; */
 }
 
 /* Comments List */
@@ -650,82 +636,38 @@ footer #social-media-footer ul li:hover a .fa-github {
 
 /* Media Queries */
 
-@media(max-width: 900px){
-    nav ul {
-        display: none;
-    }
-
-    #menu-icon {
-        display: flex;
-    }
-
-    #slideout-menu {
-        display: block;
-    }
-
-    #searchbox {
-        display: none;
-    }
-
-    #blogpost {
-        width: 100%;
-        border-left: 0;
-    }
-
-    #sidebar {
-        display: none;
-    }
-}
-
-@media(max-width: 719px){
-    main {
-        width: 95%;
-    }
-    secttion {
-        flex-direction: column;
-    }
-    .card, .card-image img {
-        width: 100%;
-    }
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-    footer #left-footer {
-        flex: 1;
-        border-right: 0;
-        padding-left: 0;
-    }
-    footer #right-footer {
-        background: #eee;
-        color: black;
-    }
-    footer #right-footer a {
-        color: black;
-    }
-    footer #social-media-footer a .fa-youtube,
-    footer #social-media-footer a .fa-facebook,
-    footer #social-media-footer a .fa-github {
-        color: black;
-        transition: 0.4s;
-    }
-}
-
 @media(max-width: 680px){
     main {
-        width: 100%;
+        width: 90%;
     }
     h1 {
         font-size: 48px;
     }
     #banner h3 {
-        font-size: 28px;
+        font-size: 20px;
+    }
+    .card-home {
+        background: #272b33;
+        padding: 20px;
+        margin-top: 20px;
+        transition: all .2s ease-in-out;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
     }
     .card {
-        text-align: center;
+        width: 100%;
     }
-    #logo-img {
-        padding: 0;
+    .card-home:hover {
+        transform: scale(1.02);
+    }
+    .card .card-image img {
+        width: 100%;
+    }
+    .tags, .btn-readmore {
+        display: none;
     }
 }
 
@@ -752,6 +694,33 @@ footer #social-media-footer ul li:hover a .fa-github {
     }
     .card .card-image img {
         width: 100%;
+    }
+}
+
+@media(max-width: 900px){
+    nav ul {
+        display: none;
+    }
+
+    #menu-icon {
+        display: flex;
+    }
+
+    #slideout-menu {
+        display: block;
+    }
+
+    #searchbox {
+        display: none;
+    }
+
+    #blogpost {
+        width: 100%;
+        border-left: 0;
+    }
+
+    #sidebar {
+        display: none;
     }
 }
 

@@ -18,7 +18,6 @@
                 <?php the_content(); ?>
             </div>
         </div>
-        
     </section>
 
     <?php } ?>
